@@ -13,8 +13,9 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "jest",
-		"test:watch": "jest --watch",
+		"test": "react-scripts test",
+		"test:coverage": "npm test -- --coverage --watchAll=false",
+		"test:watch": "react-scripts build",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -35,11 +36,11 @@
 	"devDependencies": {
 		"enzyme": "^3.11.0",
 		"enzyme-adapter-react-16": "^1.15.5",
-		"jest": "^26.5.2"
+		"jest": "^24.9.0"
 	},
 	"jest": {
-		"setupFilesAfterEnv": [
-			"<rootDir>./src/setupTests.js"
+		"coverageReporters": [
+			"text-summary"
 		]
 	}
 }
